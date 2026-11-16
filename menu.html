@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú | Café Tertulia</title>
+  <meta name="description" content="Menú de Café Tertulia: bebidas calientes, bebidas frías, panadería y alimentos con precios.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Café Tertulia</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html" aria-current="page">Menú</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor seccion">
+    <h1>Nuestro menú</h1>
+    <p class="introduccion">Precios en pesos mexicanos, IVA incluido. Pregunta por las opciones con leche vegetal (+$10).</p>
+    <nav class="filtro" aria-label="Categorías del menú">
+      <ul>
+        <li><a href="#cat-calientes">Calientes</a></li>
+        <li><a href="#cat-frias">Frías</a></li>
+        <li><a href="#cat-panaderia">Panadería</a></li>
+      </ul>
+    </nav>
+    <div class="categorias">
+      <section class="categoria" aria-labelledby="cat-calientes">
+        <div class="categoria__cabecera">
+          <img src="img/cafe.svg" width="300" height="200" alt="Taza de café caliente.">
+          <h2 id="cat-calientes">Bebidas calientes</h2>
+        </div>
+        <ul class="platillos">
+            <li class="platillo">
+              <div>
+                <h3>Espresso</h3>
+                <p>Doble carga de café de Chiapas.</p>
+              </div>
+              <p class="precio">$35</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Americano de olla</h3>
+                <p>Con canela y piloncillo.</p>
+              </div>
+              <p class="precio">$45</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Capuchino</h3>
+                <p>Espresso con leche vaporizada y espuma.</p>
+              </div>
+              <p class="precio">$55</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Chocolate oaxaqueño</h3>
+                <p>Preparado con agua o leche.</p>
+              </div>
+              <p class="precio">$50</p>
+            </li>
+        </ul>
+      </section>
+      <section class="categoria" aria-labelledby="cat-frias">
+        <div class="categoria__cabecera">
+          <img src="img/frappe.svg" width="300" height="200" alt="Vaso de frappé con popote.">
+          <h2 id="cat-frias">Bebidas frías</h2>
+        </div>
+        <ul class="platillos">
+            <li class="platillo">
+              <div>
+                <h3>Cold brew</h3>
+                <p>Infusión en frío por 18 horas.</p>
+              </div>
+              <p class="precio">$55</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Frappé de cajeta</h3>
+                <p>Con crema batida.</p>
+              </div>
+              <p class="precio">$65</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Horchata con espresso</h3>
+                <p>Horchata de la casa y un shot de café.</p>
+              </div>
+              <p class="precio">$60</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Limonada mineral</h3>
+                <p>Con hierbabuena.</p>
+              </div>
+              <p class="precio">$40</p>
+            </li>
+        </ul>
+      </section>
+      <section class="categoria" aria-labelledby="cat-panaderia">
+        <div class="categoria__cabecera">
+          <img src="img/pan.svg" width="300" height="200" alt="Concha recién horneada.">
+          <h2 id="cat-panaderia">Panadería y alimentos</h2>
+        </div>
+        <ul class="platillos">
+            <li class="platillo">
+              <div>
+                <h3>Concha artesanal</h3>
+                <p>Vainilla o chocolate.</p>
+              </div>
+              <p class="precio">$28</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Cuernito de jamón y queso</h3>
+                <p>Hojaldre horneado al momento.</p>
+              </div>
+              <p class="precio">$55</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Molletes</h3>
+                <p>Frijoles, queso gratinado y pico de gallo.</p>
+              </div>
+              <p class="precio">$70</p>
+            </li>
+            <li class="platillo">
+              <div>
+                <h3>Bowl de yogurt</h3>
+                <p>Con granola de la casa y fruta de temporada.</p>
+              </div>
+              <p class="precio">$75</p>
+            </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="contenedor pie__rejilla">
+      <section aria-labelledby="pie-horario">
+        <h2 id="pie-horario">Horario</h2>
+        <p>Lunes a viernes: 7:00 a 21:00<br>Sábado y domingo: 8:00 a 22:00</p>
+      </section>
+      <section aria-labelledby="pie-ubicacion">
+        <h2 id="pie-ubicacion">Ubicación</h2>
+        <address>Av. Universidad 123, Ciudad Universitaria<br>San Nicolás de los Garza, N.L.<br><a href="tel:+528112345678">81 1234 5678</a></address>
+      </section>
+      <section aria-labelledby="pie-proyecto">
+        <h2 id="pie-proyecto">Sobre este sitio</h2>
+        <p>Proyecto académico del Laboratorio de Programación Web, FIME UANL. Negocio ficticio.</p>
+      </section>
+    </div>
+    <p class="pie__legal">&copy; 2026 Café Tertulia · Leonardo Dávila Góngora</p>
+  </footer>
+</body>
+</html>

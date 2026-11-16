@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Café Tertulia</title>
+  <meta name="description" content="Contacta a Café Tertulia o reserva una mesa para tu grupo de estudio.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Café Tertulia</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor seccion">
+    <h1>Contacto y reservaciones</h1>
+    <p class="introduccion">¿Vienes con tu equipo a estudiar o quieres organizar un evento? Escríbenos y te respondemos en menos de 24 horas.</p>
+    <div class="contacto">
+      <form class="formulario" action="gracias.html" method="get">
+        <fieldset>
+          <legend>Tus datos</legend>
+          <div class="campo">
+            <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="correo">Correo electrónico <span aria-hidden="true">*</span></label>
+            <input id="correo" name="correo" type="email" autocomplete="email" required aria-describedby="correo-ayuda">
+            <p id="correo-ayuda" class="ayuda">Ejemplo: nombre@uanl.edu.mx</p>
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tu visita</legend>
+          <div class="campo">
+            <label for="motivo">Motivo <span aria-hidden="true">*</span></label>
+            <select id="motivo" name="motivo" required>
+              <option value="">Selecciona una opción</option>
+              <option value="reservacion">Reservar una mesa</option>
+              <option value="evento">Organizar un evento</option>
+              <option value="comentario">Comentario o sugerencia</option>
+            </select>
+          </div>
+          <div class="campos-dobles">
+            <div class="campo">
+              <label for="fecha">Fecha</label>
+              <input id="fecha" name="fecha" type="date">
+            </div>
+            <div class="campo">
+              <label for="personas">Número de personas</label>
+              <input id="personas" name="personas" type="number" min="1" max="20" value="2">
+            </div>
+          </div>
+          <div class="campo">
+            <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          <div class="campo campo--casilla">
+            <input id="avisos" name="avisos" type="checkbox">
+            <label for="avisos">Quiero recibir promociones por correo</label>
+          </div>
+        </fieldset>
+        <p class="ayuda">Los campos marcados con * son obligatorios.</p>
+        <button class="boton" type="submit">Enviar mensaje</button>
+      </form>
+      <aside class="datos" aria-labelledby="datos-titulo">
+        <h2 id="datos-titulo">Visítanos</h2>
+        <img src="img/mapa.svg" width="400" height="260" alt="Mapa ilustrativo con un marcador sobre Av. Universidad, frente a Ciudad Universitaria.">
+        <address>
+          Av. Universidad 123, Ciudad Universitaria<br>
+          San Nicolás de los Garza, N.L., C.P. 66455<br>
+          Teléfono: <a href="tel:+528112345678">81 1234 5678</a><br>
+          Correo: <a href="mailto:hola@cafetertulia.mx">hola@cafetertulia.mx</a>
+        </address>
+      </aside>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="contenedor pie__rejilla">
+      <section aria-labelledby="pie-horario">
+        <h2 id="pie-horario">Horario</h2>
+        <p>Lunes a viernes: 7:00 a 21:00<br>Sábado y domingo: 8:00 a 22:00</p>
+      </section>
+      <section aria-labelledby="pie-ubicacion">
+        <h2 id="pie-ubicacion">Ubicación</h2>
+        <address>Av. Universidad 123, Ciudad Universitaria<br>San Nicolás de los Garza, N.L.<br><a href="tel:+528112345678">81 1234 5678</a></address>
+      </section>
+      <section aria-labelledby="pie-proyecto">
+        <h2 id="pie-proyecto">Sobre este sitio</h2>
+        <p>Proyecto académico del Laboratorio de Programación Web, FIME UANL. Negocio ficticio.</p>
+      </section>
+    </div>
+    <p class="pie__legal">&copy; 2026 Café Tertulia · Leonardo Dávila Góngora</p>
+  </footer>
+</body>
+</html>

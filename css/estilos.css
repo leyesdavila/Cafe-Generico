@@ -1,0 +1,607 @@
+/* ==========================================================
+   Café Tertulia - Hoja de estilos
+   Enfoque "mobile first": los estilos base son para teléfono
+   y los breakpoints (600px y 900px) amplían el diseño.
+   ========================================================== */
+
+:root {
+  --cafe: #6b3e26;
+  --cafe-oscuro: #3e2316;
+  --crema: #fdf6ec;
+  --arena: #f2e3cf;
+  --dorado: #f2c14e;
+  --texto: #2b1d14;
+  --texto-suave: #5a4636;
+  --verde: #2f6f5e;
+  --radio: 12px;
+  --sombra: 0 4px 14px rgb(62 35 22 / 12%);
+  --ancho-max: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--crema);
+  /* Columna flexible: el pie queda al fondo aunque la página sea corta */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--cafe-oscuro);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--cafe);
+}
+
+a:hover {
+  color: var(--cafe-oscuro);
+}
+
+/* Foco visible para navegación con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.seccion {
+  padding-block: 2.5rem;
+}
+
+.seccion--alterna {
+  background-color: var(--arena);
+}
+
+.centrado {
+  text-align: center;
+}
+
+.introduccion {
+  font-size: 1.1rem;
+  color: var(--texto-suave);
+  max-width: 65ch;
+}
+
+/* Enlace para saltar al contenido (accesibilidad) */
+.saltar {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  background: var(--cafe-oscuro);
+  color: #fff;
+  border-radius: 0 0 var(--radio) var(--radio);
+}
+
+.saltar:focus {
+  top: 0;
+  color: #fff;
+}
+
+/* ---------- Encabezado y navegación (Flexbox) ---------- */
+.encabezado {
+  background-color: var(--cafe-oscuro);
+  color: #fff;
+}
+
+.encabezado__barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 0.75rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.marca:hover {
+  color: var(--dorado);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+}
+
+.menu a:hover {
+  background-color: rgb(255 255 255 / 12%);
+  color: #fff;
+}
+
+.menu a[aria-current="page"] {
+  background-color: var(--dorado);
+  color: var(--cafe-oscuro);
+  font-weight: 700;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid var(--cafe);
+  border-radius: 999px;
+  background-color: var(--cafe);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--cafe-oscuro);
+  border-color: var(--cafe-oscuro);
+  color: #fff;
+}
+
+.boton--secundario {
+  background-color: transparent;
+  color: var(--cafe);
+}
+
+.boton--secundario:hover {
+  background-color: var(--cafe);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ---------- Hero (Grid) ---------- */
+.hero {
+  padding-block: 2rem;
+}
+
+.hero__imagen {
+  margin-inline: auto;
+  border-radius: 24px;
+}
+
+.hero__rejilla {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.etiqueta {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  background-color: var(--arena);
+  color: var(--cafe-oscuro);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Tarjetas y productos (Grid) ---------- */
+.tarjetas,
+.productos {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.tarjeta {
+  padding: 1.25rem;
+  border-left: 5px solid var(--dorado);
+  border-radius: var(--radio);
+  background-color: #fff;
+  box-shadow: var(--sombra);
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radio);
+  background-color: #fff;
+  box-shadow: var(--sombra);
+}
+
+.producto img {
+  width: 100%;
+}
+
+.producto__cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1.25rem;
+}
+
+.producto__cuerpo h3 {
+  margin: 0 0 0.25rem;
+}
+
+.producto__cuerpo p {
+  margin: 0 0 0.5rem;
+}
+
+.precio {
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--verde);
+}
+
+/* ---------- Página de menú ---------- */
+.filtro ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.filtro a {
+  display: block;
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--cafe);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.filtro a:hover {
+  background-color: var(--cafe);
+  color: #fff;
+}
+
+.categorias {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.categoria {
+  overflow: hidden;
+  border-radius: var(--radio);
+  background-color: #fff;
+  box-shadow: var(--sombra);
+  scroll-margin-top: 1rem;
+}
+
+.categoria__cabecera {
+  display: flex;
+  align-items: center;
+  background-color: var(--cafe-oscuro);
+}
+
+.categoria__cabecera img {
+  width: 96px;
+}
+
+.categoria__cabecera h2 {
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+}
+
+.platillos {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.25rem 1rem;
+}
+
+.platillo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px dashed #d9c3a8;
+}
+
+.platillo:last-child {
+  border-bottom: 0;
+}
+
+.platillo h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.platillo p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+.platillo .precio {
+  margin: 0;
+  color: var(--verde);
+  white-space: nowrap;
+}
+
+/* ---------- Página de contacto ---------- */
+.contacto {
+  display: grid;
+  gap: 2rem;
+}
+
+.formulario {
+  padding: 1.25rem;
+  border-radius: var(--radio);
+  background-color: #fff;
+  box-shadow: var(--sombra);
+}
+
+fieldset {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--cafe-oscuro);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid #b79a7f;
+  border-radius: 8px;
+  background-color: #fff;
+  color: var(--texto);
+  font: inherit;
+}
+
+.campo--casilla {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.campo--casilla input {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.campo--casilla label {
+  font-weight: 400;
+}
+
+.campos-dobles {
+  display: grid;
+  gap: 0 1rem;
+}
+
+.ayuda {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.formulario > .ayuda {
+  margin-bottom: 1rem;
+}
+
+.datos h2 {
+  margin-top: 0;
+}
+
+.datos img {
+  margin-bottom: 1rem;
+  border-radius: var(--radio);
+}
+
+address {
+  font-style: normal;
+}
+
+/* ---------- Página de confirmación ---------- */
+.confirmacion {
+  max-width: 40rem;
+  text-align: center;
+}
+
+.confirmacion .acciones {
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.confirmacion .introduccion {
+  margin-inline: auto;
+}
+
+/* ---------- Pie de página (Grid) ---------- */
+.pie {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  background-color: var(--cafe-oscuro);
+  color: #f3e8dc;
+}
+
+.pie h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--dorado);
+}
+
+.pie a {
+  color: #fff;
+}
+
+.pie__rejilla {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.pie__legal {
+  margin: 1.5rem 0 0;
+  padding: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 15%);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   Breakpoint 1: tabletas (600px o más)
+   ========================================================== */
+@media (min-width: 600px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .encabezado__barra {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tarjetas,
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .campos-dobles {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pie__rejilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================
+   Breakpoint 2: escritorio (900px o más)
+   ========================================================== */
+@media (min-width: 900px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .seccion {
+    padding-block: 3.5rem;
+  }
+
+  .hero {
+    padding-block: 3.5rem;
+  }
+
+  .hero__rejilla {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+  }
+
+  .tarjetas,
+  .productos,
+  .categorias,
+  .pie__rejilla {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .categoria__cabecera {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .categoria__cabecera img {
+    width: 100%;
+  }
+
+  .contacto {
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+  }
+
+  .formulario {
+    padding: 2rem;
+  }
+}
+
+/* Respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio | Café Tertulia</title>
+  <meta name="description" content="Café Tertulia: cafetería de especialidad junto a Ciudad Universitaria, en San Nicolás de los Garza.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido principal</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__barra">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Café Tertulia</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="contenedor hero__rejilla">
+        <div class="hero__texto">
+          <p class="etiqueta">Cafetería de especialidad</p>
+          <h1 id="hero-titulo">Café recién tostado a un paso de Ciudad Universitaria</h1>
+          <p>Un lugar tranquilo para estudiar, platicar o tomar un descanso entre clases. Preparamos cada bebida con grano mexicano de Veracruz y Chiapas.</p>
+          <div class="acciones">
+            <a class="boton" href="menu.html">Ver el menú</a>
+            <a class="boton boton--secundario" href="contacto.html">Reservar una mesa</a>
+          </div>
+        </div>
+        <img class="hero__imagen" src="img/hero.svg" width="600" height="420"
+             alt="Ilustración de una taza de café humeante sobre una mesa de madera.">
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="por-que">
+      <div class="contenedor">
+        <h2 id="por-que">¿Por qué visitarnos?</h2>
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <h3>Grano mexicano</h3>
+            <p>Trabajamos directo con productores de Coatepec y Chiapas, y tostamos cada semana en pequeños lotes.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Espacio para estudiar</h3>
+            <p>Wi-Fi gratuito, contactos en cada mesa y una zona silenciosa en la planta alta.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Descuento estudiantil</h3>
+            <p>Presenta tu credencial UANL y recibe 10&nbsp;% de descuento en cualquier bebida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--alterna" aria-labelledby="favoritos">
+      <div class="contenedor">
+        <h2 id="favoritos">Favoritos de la casa</h2>
+        <div class="productos">
+          <article class="producto">
+            <img src="img/cafe.svg" width="300" height="200" alt="Taza de café americano.">
+            <div class="producto__cuerpo">
+              <h3>Americano de olla</h3>
+              <p>Café de Veracruz con canela y piloncillo.</p>
+              <p class="precio">$45</p>
+            </div>
+          </article>
+          <article class="producto">
+            <img src="img/pan.svg" width="300" height="200" alt="Concha de vainilla recién horneada.">
+            <div class="producto__cuerpo">
+              <h3>Concha artesanal</h3>
+              <p>Horneada cada mañana, de vainilla o chocolate.</p>
+              <p class="precio">$28</p>
+            </div>
+          </article>
+          <article class="producto">
+            <img src="img/frappe.svg" width="300" height="200" alt="Vaso de frappé de caramelo con popote.">
+            <div class="producto__cuerpo">
+              <h3>Frappé de cajeta</h3>
+              <p>Bebida fría con cajeta de Celaya y crema batida.</p>
+              <p class="precio">$65</p>
+            </div>
+          </article>
+        </div>
+        <p class="centrado"><a class="boton" href="menu.html">Ver el menú completo</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <div class="contenedor pie__rejilla">
+      <section aria-labelledby="pie-horario">
+        <h2 id="pie-horario">Horario</h2>
+        <p>Lunes a viernes: 7:00 a 21:00<br>Sábado y domingo: 8:00 a 22:00</p>
+      </section>
+      <section aria-labelledby="pie-ubicacion">
+        <h2 id="pie-ubicacion">Ubicación</h2>
+        <address>Av. Universidad 123, Ciudad Universitaria<br>San Nicolás de los Garza, N.L.<br><a href="tel:+528112345678">81 1234 5678</a></address>
+      </section>
+      <section aria-labelledby="pie-proyecto">
+        <h2 id="pie-proyecto">Sobre este sitio</h2>
+        <p>Proyecto académico del Laboratorio de Programación Web, FIME UANL. Negocio ficticio.</p>
+      </section>
+    </div>
+    <p class="pie__legal">&copy; 2026 Café Tertulia · Leonardo Dávila Góngora</p>
+  </footer>
+</body>
+</html>
